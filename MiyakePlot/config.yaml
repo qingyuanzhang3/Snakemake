@@ -1,0 +1,24 @@
+samples:
+  Büntgen18_ALT01: data/Büntgen18_ALT01.csv
+  Büntgen18_AUT02: data/Büntgen18_AUT02.csv
+  Büntgen18_CAN06: data/Büntgen18_CAN06.csv
+  Büntgen18_CHN01: data/Büntgen18_CHN01.csv
+  Büntgen18_GER01: data/Büntgen18_GER01.csv
+  Büntgen18_GER07: data/Büntgen18_GER07.csv
+  Büntgen18_GRE02: data/Büntgen18_GRE02.csv
+  Büntgen18_JAP01: data/Büntgen18_JAP01.csv
+  Büntgen18_MON03: data/Büntgen18_MON03.csv
+  Büntgen18_MON09: data/Büntgen18_MON09.csv
+  Büntgen18_PAK04: data/Büntgen18_PAK04.csv
+  Büntgen18_RUS04: data/Büntgen18_RUS04.csv
+  Büntgen18_RUS15: data/Büntgen18_RUS15.csv
+  Büntgen18_RUS17: data/Büntgen18_RUS17.csv
+  Büntgen18_RUS20: data/Büntgen18_RUS20.csv
+  Büntgen18_SUI01: data/Büntgen18_SUI01.csv
+  Büntgen18_SWE02: data/Büntgen18_SWE02.csv
+  Büntgen18_SWE05: data/Büntgen18_SWE05.csv
+  Büntgen18_TIB01: data/Büntgen18_TIB01.csv
+  Büntgen18_USA02: data/Büntgen18_USA02.csv
+  Büntgen18_USA11: data/Büntgen18_USA11.csv
+  Büntgen18_USA18: data/Büntgen18_USA18.csv
+  Miyake12_Cedar: data/Miyake12_Cedar.csv

@@ -1,0 +1,23 @@
+configfile: "config.yaml"
+def get_path(wildcards):
+    return config["samples"][wildcards.sample]
+
+rule all:
+    input:
+        "plot/success.png"
+
+rule link:
+    input:
+        expand("plot/{sample}.png", sample=config["samples"])
+    output:
+        "plot/success.png"
+    shell:
+        "touch plot/success.png"
+
+rule plot:
+    input:
+        get_path
+    output:
+        "plot/{sample}.png"
+    script:
+        "scripts/plot.py"
