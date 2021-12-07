@@ -4,15 +4,7 @@ def get_path(wildcards):
 
 rule all:
     input:
-        "plot/success.png"
-
-rule link:
-    input:
         expand("plot/{sample}.png", sample=config["samples"])
-    output:
-        "plot/success.png"
-    shell:
-        "touch plot/success.png"
 
 rule plot:
     input:
