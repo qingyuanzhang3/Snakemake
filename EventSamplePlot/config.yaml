@@ -1,0 +1,55 @@
+event:
+  # 660BCE_Ew: -660
+  # 660BCE_Lw: -660
+  993AD: 993
+  5259BCE: -5259
+  7176BCE: -7176
+  775AD_early: 775
+  # 775AD_late: 775
+  # 5410BCE: -5410
+
+cbm_model:
+  Miyake17: Miyake17
+  Brehm21: Brehm21
+  Guttler14: Guttler14
+  Buntgen18: Buntgen18
+
+dataset:
+  775AD_late: data/775AD_late/Büntgen18_CHN01.csv
+  775AD_late: data/775AD_late/Büntgen18_JAP01.csv
+  775AD_late: data/775AD_late/Büntgen18_RUS04.csv
+  775AD_late: data/775AD_late/Büntgen18_USA02.csv
+  775AD_late: data/775AD_late/Büntgen18_USA18.csv
+  775AD_late: data/775AD_late/Büntgen18_GER07.csv
+  775AD_late: data/775AD_late/Büntgen18_MON03.csv
+  775AD_late: data/775AD_late/Büntgen18_SWE05.csv
+  775AD_late: data/775AD_late/Büntgen18_USA11.csv
+  775AD_early: data/775AD_early/Büntgen18_ALT01.csv
+  775AD_early: data/775AD_early/Büntgen18_CAN06.csv
+  775AD_early: data/775AD_early/Büntgen18_PAK04.csv
+  775AD_early: data/775AD_early/Büntgen18_RUS17.csv
+  775AD_early: data/775AD_early/Büntgen18_SWE02.csv
+  775AD_early: data/775AD_early/Büntgen18_AUT02.csv
+  775AD_early: data/775AD_early/Büntgen18_GRE02.csv
+  775AD_early: data/775AD_early/Büntgen18_RUS15.csv
+  775AD_early: data/775AD_early/Büntgen18_RUS20.csv
+  775AD_early: data/775AD_early/Büntgen18_TIB01.csv
+  993AD_Büntgen18_ALT02: data/993AD/Büntgen18_ALT02.csv
+  993AD_Büntgen18_MON05: data/993AD/Büntgen18_MON05.csv
+  # 993AD_Büntgen18_SWE02: data/993AD/Büntgen18_SWE02.csv
+  # 993AD_Büntgen18_SWE04: data/993AD/Büntgen18_SWE04.csv
+  993AD_Büntgen18_CHI01: data/993AD/Büntgen18_CHI01.csv
+  993AD_Büntgen18_SWE01: data/993AD/Büntgen18_SWE01.csv
+  993AD_Büntgen18_SWE03: data/993AD/Büntgen18_SWE03.csv
+  660BCE_Sakurai20_CedarEw: data/660BCE_Ew/Sakurai20_CedarEw.csv
+  660BCE_Sakurai20_CedarLw: data/660BCE_Lw/Sakurai20_CedarLw.csv
+  5259BCE_Brehm21_AlpineLarch: data/5259BCE/Brehm21_AlpineLarch.csv
+  5259BCE_Brehm21_IrishOak: data/5259BCE/Brehm21_IrishOak.csv
+  5259BCE_Brehm21_SibirianLarch: data/5259BCE/Brehm21_SibirianLarch.csv
+  5259BCE_Brehm21_USABristlecone: data/5259BCE/Brehm21_USABristlecone.csv
+  5410BCE_Miyake21_Bristlecone: data/5410BCE/Miyake21_Bristlecone.csv
+  5410BCE_Miyake21_Finland1: data/5410BCE/Miyake21_Finland1.csv
+  5410BCE_Miyake21_Switzerland: data/5410BCE/Miyake21_Switzerland.csv
+  7176BCE_Brehm21_AlpineLarch: data/7176BCE/Brehm21_AlpineLarch.csv
+  7176BCE_Brehm21_GermanOak: data/7176BCE/Brehm21_GermanOak.csv
+  7176BCE_Brehm21_USABristlecone: data/7176BCE/Brehm21_USABristlecone.csv
