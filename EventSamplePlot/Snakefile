@@ -4,18 +4,22 @@ import os
 def get_param_year(wildcards):
     return float(config["event"][wildcards.event])
 
+def get_param_hem(wildcards):
+    return config["hemisphere"][wildcards.event]
+
 def get_sample_directory(wildcards):
     return "data/" + wildcards.event
 
-def get_output_directory(wildcards):
+def get_plot_dataset_input_directory(wildcards):
     return config["dataset"][wildcards.dataset]
+
 
 rule all:
     input:
-        expand("plot/posterior/{event}.jpg", event=config["event"]),
-        # expand("plot/datasets/{dataset}.jpg", dataset=config["dataset"]),
-        expand("diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
-        expand("diagnostics/{event}.jpg", event=config["event"]),
+        expand("plots/posterior/{event}.jpg", event=config["event"]),
+        expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
+        expand("plots/diagnostics/{event}.jpg", event=config["event"]),
+        # expand("plots/datasets/{dataset}.jpg", dataset=config["dataset"]),
 
 rule sample:
     input:
@@ -24,7 +28,8 @@ rule sample:
         "chain/{event}_{cbm_model}.npy"
     params:
         year = get_param_year,
-        cbm_model = "{cbm_model}"
+        cbm_model = "{cbm_model}",
+        hemisphere = get_param_hem
     script:
         "scripts/sample.py"
 
@@ -32,29 +37,29 @@ rule plot_posterior:
     input:
         expand("chain/{event}_{cbm_model}.npy", event="{event}", cbm_model=config["cbm_model"])
     output:
-        "plot/posterior/{event}.jpg"
+        "plots/posterior/{event}.jpg"
     params:
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
         event = "{event}"
     script:
-        "scripts/plot_one.py"
+        "scripts/plot_posterior.py"
 
-# rule plot_diagnostics:
-#     input:
-#         "chain/{event}_{cbm_model}.npy"
-#     output:
-#         "diagnostics/{event}_{cbm_model}.jpg"
-#     params:
-#         event = "{event}",
-#         cbm_model = "{cbm_model}"
-#     script:
-#         "scripts/chain_diagnostics.py"
+rule plot_diagnostics:
+    input:
+        "chain/{event}_{cbm_model}.npy"
+    output:
+        "plots/diagnostics/{event}_{cbm_model}.jpg"
+    params:
+        event = "{event}",
+        cbm_model = "{cbm_model}"
+    script:
+        "scripts/chain_diagnostics.py"
 
 rule get_event_average:
     input:
         "data/{event}"
     output:
-        "data/mean/{event}.csv"
+        "data/means/{event}.csv"
     params:
         event = "{event}"
     script:
@@ -62,9 +67,10 @@ rule get_event_average:
 
 rule plot_continuous_d14c:
     input:
-        "data/mean/{event}.csv"
+        "data/means/{event}.csv",
+        expand("chain/{event}_{cbm_model}.npy", event="{event}", cbm_model=config["cbm_model"])
     output:
-        "diagnostics/{event}.jpg"
+        "plots/diagnostics/{event}.jpg"
     params:
         event = "{event}",
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
@@ -73,12 +79,8 @@ rule plot_continuous_d14c:
 
 rule plot_dataset:
     input:
-        get_output_directory
+        get_plot_dataset_input_directory
     output:
-        "plot/datasets/{dataset}.jpg"
+        "plots/datasets/{dataset}.jpg"
     script:
         "scripts/plot_dataset.py"
-
-# rule plot_all:
-#     input:
-#         expand("chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"])

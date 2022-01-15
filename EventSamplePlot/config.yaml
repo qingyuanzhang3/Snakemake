@@ -1,12 +1,26 @@
 event:
-  # 660BCE_Ew: -660
-  # 660BCE_Lw: -660
-  993AD: 993
+  660BCE-Ew: -660
+  660BCE-Lw: -660
+  993AD-N: 993
+  993AD-S: 993
   5259BCE: -5259
   7176BCE: -7176
-  775AD_early: 775
-  # 775AD_late: 775
-  # 5410BCE: -5410
+  775AD-early-N: 775
+  775AD-late-N: 775
+  775AD-early-S: 775
+  5410BCE: -5410
+
+hemisphere:
+  660BCE-Ew: north
+  660BCE-Lw: north
+  993AD-N: north
+  993AD-S: south
+  5259BCE: north
+  7176BCE: north
+  775AD-early-N: north
+  775AD-late-N: north
+  775AD-early-S: south
+  5410BCE: north
 
 cbm_model:
   Miyake17: Miyake17
@@ -15,29 +29,29 @@ cbm_model:
   Buntgen18: Buntgen18
 
 dataset:
-  775AD_late: data/775AD_late/Büntgen18_CHN01.csv
-  775AD_late: data/775AD_late/Büntgen18_JAP01.csv
-  775AD_late: data/775AD_late/Büntgen18_RUS04.csv
-  775AD_late: data/775AD_late/Büntgen18_USA02.csv
-  775AD_late: data/775AD_late/Büntgen18_USA18.csv
-  775AD_late: data/775AD_late/Büntgen18_GER07.csv
-  775AD_late: data/775AD_late/Büntgen18_MON03.csv
-  775AD_late: data/775AD_late/Büntgen18_SWE05.csv
-  775AD_late: data/775AD_late/Büntgen18_USA11.csv
-  775AD_early: data/775AD_early/Büntgen18_ALT01.csv
-  775AD_early: data/775AD_early/Büntgen18_CAN06.csv
-  775AD_early: data/775AD_early/Büntgen18_PAK04.csv
-  775AD_early: data/775AD_early/Büntgen18_RUS17.csv
-  775AD_early: data/775AD_early/Büntgen18_SWE02.csv
-  775AD_early: data/775AD_early/Büntgen18_AUT02.csv
-  775AD_early: data/775AD_early/Büntgen18_GRE02.csv
-  775AD_early: data/775AD_early/Büntgen18_RUS15.csv
-  775AD_early: data/775AD_early/Büntgen18_RUS20.csv
-  775AD_early: data/775AD_early/Büntgen18_TIB01.csv
+  775AD-late_Büntgen18_CHN01: data/775AD-late/Büntgen18_CHN01.csv
+  775AD-late_Büntgen18_JAP01: data/775AD-late/Büntgen18_JAP01.csv
+  775AD-late_Büntgen18_RUS04: data/775AD-late/Büntgen18_RUS04.csv
+  775AD-late_Büntgen18_USA02: data/775AD-late/Büntgen18_USA02.csv
+  775AD-late_Büntgen18_USA18: data/775AD-late/Büntgen18_USA18.csv
+  775AD-late_Büntgen18_GER07: data/775AD-late/Büntgen18_GER07.csv
+  775AD-late_Büntgen18_MON03: data/775AD-late/Büntgen18_MON03.csv
+  775AD-late_Büntgen18_SWE05: data/775AD-late/Büntgen18_SWE05.csv
+  775AD-late_Büntgen18_USA11: data/775AD-late/Büntgen18_USA11.csv
+  775AD-early_Büntgen18_ALT01: data/775AD-early/Büntgen18_ALT01.csv
+  775AD-early_Büntgen18_CAN06: data/775AD-early/Büntgen18_CAN06.csv
+  775AD-early_Büntgen18_PAK04: data/775AD-early/Büntgen18_PAK04.csv
+  775AD-early_Büntgen18_RUS17: data/775AD-early/Büntgen18_RUS17.csv
+  775AD-early_Büntgen18_SWE02: data/775AD-early/Büntgen18_SWE02.csv
+  775AD-early_Büntgen18_AUT02: data/775AD-early/Büntgen18_AUT02.csv
+  775AD-early_Büntgen18_GRE02: data/775AD-early/Büntgen18_GRE02.csv
+  775AD-early_Büntgen18_RUS15: data/775AD-early/Büntgen18_RUS15.csv
+  775AD-early_Büntgen18_RUS20: data/775AD-early/Büntgen18_RUS20.csv
+  775AD-early_Büntgen18_TIB01: data/775AD-early/Büntgen18_TIB01.csv
   993AD_Büntgen18_ALT02: data/993AD/Büntgen18_ALT02.csv
   993AD_Büntgen18_MON05: data/993AD/Büntgen18_MON05.csv
-  # 993AD_Büntgen18_SWE02: data/993AD/Büntgen18_SWE02.csv
-  # 993AD_Büntgen18_SWE04: data/993AD/Büntgen18_SWE04.csv
+  993AD_Büntgen18_SWE02: data/993AD/Büntgen18_SWE02.csv
+  993AD_Büntgen18_SWE04: data/993AD/Büntgen18_SWE04.csv
   993AD_Büntgen18_CHI01: data/993AD/Büntgen18_CHI01.csv
   993AD_Büntgen18_SWE01: data/993AD/Büntgen18_SWE01.csv
   993AD_Büntgen18_SWE03: data/993AD/Büntgen18_SWE03.csv

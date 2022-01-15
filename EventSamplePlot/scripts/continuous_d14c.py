@@ -7,16 +7,18 @@ import os
 models = snakemake.params.cbm_model
 event = snakemake.params.event
 colors = ["g", "b", "r", "c"]
-size = 100; nwalkers = 8
+size = 100
 size2 = 30
 fig, (ax1, ax2) = plt.subplots(2, figsize=(8, 8), sharex=True, gridspec_kw={'height_ratios': [2, 1]})
 min_prod = np.inf; max_prod = -np.inf
 i = 0
-for model in models:
+for i in range(len(snakemake.input[1:])):
+    model = models[i]
     cbm = ticktack.load_presaved_model(model, production_rate_units = 'atoms/cm^2/s')
     sf = fitting.SingleFitter(cbm, cbm_model=model)
-    sf.load_data("data/mean/" + event + '.csv')
-    chain = np.load("chain/" + event + "_" + model + ".npy")
+    sf.load_data(snakemake.input[0])
+    chain = np.load(snakemake.input[i+1])
+    nwalkers = chain.shape[1] * 2
     sf.prepare_function(model="flexible_sinusoid")
 
     idx = np.random.randint(len(chain), size=size)
@@ -60,4 +62,4 @@ ax2.set_ylabel("Production rate ($cm^2s^{-1}$)");
 ax2.legend(loc="upper left")
 plt.suptitle(event);
 plt.tight_layout();
-plt.savefig("diagnostics/" + event + ".jpg")
+plt.savefig(snakemake.output[0])

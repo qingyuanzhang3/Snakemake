@@ -31,4 +31,4 @@ arr[:, 0] = time_sampling
 arr[:, 1] = dc14_data / counter
 arr[:, 2] = np.sqrt(dc14_data_error) / counter
 df = pd.DataFrame(arr, columns=['year', 'd14c', 'sig_d14c'])
-df.to_csv("data/mean/" + snakemake.params.event + ".csv", index=False)
+df.to_csv(snakemake.output[0], index=False)
