@@ -19,7 +19,7 @@ for i in range(len(snakemake.input[1:])):
     sf.load_data(snakemake.input[0])
     chain = np.load(snakemake.input[i+1])
     nwalkers = chain.shape[1] * 2
-    sf.prepare_function(model="flexible_sinusoid")
+    sf.prepare_function(model=snakemake.params.production_model)
 
     idx = np.random.randint(len(chain), size=size)
     params = np.zeros((size, chain[0].size))

@@ -13,6 +13,7 @@ def get_sample_directory(wildcards):
 def get_plot_dataset_input_directory(wildcards):
     return config["dataset"][wildcards.dataset]
 
+production_model = "flexible_sinusoid"
 
 rule all:
     input:
@@ -29,7 +30,8 @@ rule sample:
     params:
         year = get_param_year,
         cbm_model = "{cbm_model}",
-        hemisphere = get_param_hem
+        hemisphere = get_param_hem,
+        production_model = production_model
     script:
         "scripts/sample.py"
 
@@ -74,6 +76,7 @@ rule plot_continuous_d14c:
     params:
         event = "{event}",
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
+        production_model = production_model
     script:
         "scripts/continuous_d14c.py"
 
