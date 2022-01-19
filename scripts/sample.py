@@ -8,6 +8,6 @@ mf, sampler = fitting.fit_event(snakemake.params.year,
                                 cbm_model=snakemake.params.cbm_model,
                                 production_model=snakemake.params.production_model,
                                 hemisphere=snakemake.params.hemisphere,
-                                sampler="MCMC", burnin=2000, production=2000,
-                                oversample=108)
+                                sampler="MCMC", burnin=800, production=1000,
+                                oversample=108, burnin_time=2000)
 np.save(snakemake.output[0], sampler)
