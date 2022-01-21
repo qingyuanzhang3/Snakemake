@@ -16,7 +16,9 @@ else:
 cf = fitting.CarbonFitter()
 fig = cf.plot_multiple_chains(chains, chain.shape[1] * 2,
                         params_names=labels,
-                        labels = snakemake.params.cbm_model
+                        labels = snakemake.params.cbm_model,
+                        label_font_size=8,
+                        tick_font_size=8
                         )
 plt.suptitle(snakemake.params.event, fontsize=25)
 fig.savefig(snakemake.output[0])

@@ -29,10 +29,10 @@ for i in range(len(snakemake.input[1:])):
         dc14 = sf.dc14_fine(params=params[j, :])
         d14cs[j, :] = dc14
 
-    for d14c in d14cs[:-1]:
+    for d14c in d14cs:
         ax1.plot(sf.time_data_fine, d14c, alpha=0.05, color=colors[i])
 
-    ax1.plot(sf.time_data_fine, d14cs[-1], color=colors[i], label=model)
+    ax1.plot(sf.time_data_fine, d14cs[-1], color=colors[i], label=model, visible=False)
     ax1.set_ylabel("$\Delta^{14}$C (‰)")
     fig.subplots_adjust(hspace=0.05)
 
