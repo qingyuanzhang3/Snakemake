@@ -17,9 +17,9 @@ production_model = "flexible_sinusoid_affine_variant"
 
 rule all:
     input:
-        expand("plots/posterior/{event}.jpg", event=config["event"]),
+        # expand("plots/posterior/{event}.jpg", event=config["event"]),
         expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
-        expand("plots/diagnostics/{event}.jpg", event=config["event"]),
+        # expand("plots/diagnostics/{event}.jpg", event=config["event"]),
         # expand("plots/datasets/{dataset}.jpg", dataset=config["dataset"]),
 
 rule sample:
