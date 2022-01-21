@@ -4,8 +4,10 @@ import numpy as np
 chain = np.load(snakemake.input[0])
 if chain.shape[0] == 4:
     labels = ["start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm^2 yr/s)"]
-else:
+elif chain.shape[0] == 5:
     labels = ["start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm^2 yr/s)", "solar amplitude (cm^2/s)"]
+else:
+    labels = ["gradient", "start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm^2 yr/s)", "solar amplitude (cm^2/s)"]
 
 fig, axs = plt.subplots(2, 3, figsize=(18, 8), sharex=True)
 axs = axs.flatten()

@@ -8,8 +8,11 @@ for i in range(len(snakemake.input)):
     chains.append(chain)
 if chains[-1].shape[1] == 4:
     labels = ["start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm$^2$ yr/s)"]
-else:
+elif chains[-1].shape[1] == 5:
     labels = ["start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm$^2$ yr/s)", "solar amplitude (cm$^2$/s)"]
+else:
+    labels = ["gradient", "start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm$^2$ yr/s)", "solar amplitude (cm$^2$/s)"]
+
 cf = fitting.CarbonFitter()
 fig = cf.plot_multiple_chains(chains, chain.shape[1] * 2,
                         params_names=labels,
