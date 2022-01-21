@@ -13,7 +13,7 @@ def get_sample_directory(wildcards):
 def get_plot_dataset_input_directory(wildcards):
     return config["dataset"][wildcards.dataset]
 
-production_model = "flexible_sinusoid"
+production_model = "flexible_sinusoid_affine_variant"
 
 rule all:
     input:
