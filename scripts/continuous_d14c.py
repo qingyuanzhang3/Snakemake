@@ -3,6 +3,7 @@ import numpy as np
 import ticktack
 from ticktack import fitting
 import os
+from matplotlib.lines import Line2D
 
 models = snakemake.params.cbm_model
 event = snakemake.params.event
@@ -11,11 +12,11 @@ size = 100
 size2 = 30
 fig, (ax1, ax2) = plt.subplots(2, figsize=(8, 8), sharex=True, gridspec_kw={'height_ratios': [2, 1]})
 min_prod = np.inf; max_prod = -np.inf
-i = 0
-for i in range(len(snakemake.input[1:])):
+
+for i, model in enumerate(snakemake.input[1:]):
     model = models[i]
     cbm = ticktack.load_presaved_model(model, production_rate_units = 'atoms/cm^2/s')
-    sf = fitting.SingleFitter(cbm, cbm_model=model)
+    sf = fitting.SingleFitter(cbm, cbm_model=model, hemisphere=snakemake.params.hemisphere)
     sf.load_data(snakemake.input[0])
     chain = np.load(snakemake.input[i+1])
     nwalkers = chain.shape[1] * 2
@@ -32,7 +33,6 @@ for i in range(len(snakemake.input[1:])):
     for d14c in d14cs:
         ax1.plot(sf.time_data_fine, d14c, alpha=0.05, color=colors[i])
 
-    ax1.plot(sf.time_data_fine, d14cs[-1], color=colors[i], label=model, visible=False)
     ax1.set_ylabel("$\Delta^{14}$C (‰)")
     fig.subplots_adjust(hspace=0.05)
 
@@ -43,7 +43,6 @@ for i in range(len(snakemake.input[1:])):
             max_prod = np.max(production_rate)
         elif np.min(production_rate) < min_prod:
             min_prod = np.min(production_rate)
-    i += 1
 
 path = "data/" + event
 file_names = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
@@ -53,8 +52,13 @@ for file in file_names:
     ax1.plot(sf.time_data, sf.d14c_data, "o",  color="gray",  alpha=0.2)
 sf.load_data(snakemake.input[0])
 ax1.errorbar(sf.time_data, sf.d14c_data, yerr=sf.d14c_data_error, fmt="ok", capsize=3,
-             markersize=6.5, elinewidth=3, label="average $\Delta^{14}$C data")
-ax1.legend();
+             markersize=6.5, elinewidth=3, label="average $\Delta^{14}$C")
+custom_lines = [Line2D([0], [0], color=colors[0], lw=1.5, label=models[0]),
+                Line2D([0], [0], color=colors[1], lw=1.5, label=models[1]),
+                Line2D([0], [0], color=colors[2], lw=1.5, label=models[2]),
+                Line2D([0], [0], color=colors[3], lw=1.5, label=models[3]),
+                Line2D([0], [0], color="k", marker="o", lw=1.5, label="average $\Delta^{14}$C")]
+ax1.legend(handles=custom_lines)
 ax2.set_ylim(-0.1, 20);
 ax2.set_xlabel("Calendar Year (CE)");
 ax2.set_xlim(sf.start-0.2, sf.end+0.2);

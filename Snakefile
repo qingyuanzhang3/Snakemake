@@ -17,9 +17,9 @@ production_model = "flexible_sinusoid_affine_variant"
 
 rule all:
     input:
-        # expand("plots/posterior/{event}.jpg", event=config["event"]),
+        expand("plots/posterior/{event}.jpg", event=config["event"]),
         expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
-        # expand("plots/diagnostics/{event}.jpg", event=config["event"]),
+        expand("plots/diagnostics/{event}.jpg", event=config["event"]),
         # expand("plots/datasets/{dataset}.jpg", dataset=config["dataset"]),
 
 rule sample:
@@ -76,7 +76,8 @@ rule plot_continuous_d14c:
     params:
         event = "{event}",
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
-        production_model = production_model
+        production_model = production_model,
+        hemisphere = get_param_hem
     script:
         "scripts/continuous_d14c.py"
 
