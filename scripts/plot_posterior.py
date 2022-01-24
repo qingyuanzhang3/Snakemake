@@ -7,11 +7,11 @@ for i in range(len(snakemake.input)):
     chain = np.load(snakemake.input[i])
     chains.append(chain)
 if chains[-1].shape[1] == 4:
-    labels = ["start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm$^2$ yr/s)"]
+    labels = ["start date (yr)", "duration (yr)", "$\phi$ (yr)", "spike production (atoms/cm$^2$ yr/s)"]
 elif chains[-1].shape[1] == 5:
-    labels = ["start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm$^2$ yr/s)", "solar amplitude (cm$^2$/s)"]
+    labels = ["start date (yr)", "duration (yr)", "$\phi$ (yr)", "spike production (atoms/cm$^2$ yr/s)", "solar amplitude (atoms/cm$^2$/s)"]
 else:
-    labels = ["gradient", "start date (yr)", "duration (yr)", "phi (yr)", "spike production (cm$^2$ yr/s)", "solar amplitude (cm$^2$/s)"]
+    labels = ["gradient (atoms/cm$^2$/year$^2$)", "start date (yr)", "duration (yr)", "$\phi$ (yr)", "spike production (atoms/cm$^2$ yr/s)", "solar amplitude (atoms/cm$^2$/s)"]
 
 cf = fitting.CarbonFitter()
 fig = cf.plot_multiple_chains(chains, chain.shape[1] * 2,

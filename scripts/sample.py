@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-from astropy.table import Table
 import numpy as np
 from ticktack import fitting
 

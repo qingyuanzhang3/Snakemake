@@ -20,7 +20,9 @@ rule all:
         # expand("plots/posterior/{event}.jpg", event=config["event"]),
         expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
         # expand("plots/diagnostics/{event}.jpg", event=config["event"]),
+        expand("non-parametric/{event}_{cbm_model}.p", event=config["event"], cbm_model=config["cbm_model"]),
         # expand("plots/datasets/{dataset}.jpg", dataset=config["dataset"]),
+        # expand("data/means/{event}.csv", event=config["event"])
 
 rule sample:
     input:
@@ -76,9 +78,21 @@ rule plot_continuous_d14c:
     params:
         event = "{event}",
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
-        production_model = production_model
+        production_model = production_model,
+        hemisphere = get_param_hem
     script:
         "scripts/continuous_d14c.py"
+
+rule fit_control_points:
+    input:
+        get_sample_directory
+    output:
+        "non-parametric/{event}_{cbm_model}.p"
+    params:
+        cbm_model = "{cbm_model}",
+        hemisphere = get_param_hem,
+    script:
+        "scripts/control_points.py"
 
 rule plot_dataset:
     input:
