@@ -1,6 +1,7 @@
+from astropy.table import Table
 import numpy as np
 from ticktack import fitting
-from astropy.table import Table
+
 
 mf, sampler = fitting.fit_event(snakemake.params.year,
                                 path=snakemake.input[0],

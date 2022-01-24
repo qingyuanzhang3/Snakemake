@@ -1,5 +1,7 @@
+from astropy.table import Table
 from ticktack import fitting
 import pickle
+
 
 mf, soln = fitting.fit_event(None, path=snakemake.input[0], production_model='control_points',
                             cbm_model=snakemake.params.cbm_model,
