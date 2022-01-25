@@ -13,16 +13,19 @@ def get_sample_directory(wildcards):
 def get_plot_dataset_input_directory(wildcards):
     return config["dataset"][wildcards.dataset]
 
-production_model = "flexible_sinusoid_affine_variant"
+# production_model = "flexible_sinusoid_affine_variant"
+production_model = "flexible_sinusoid"
+# production_model = "affine"
 
 rule all:
     input:
-        # expand("plots/posterior/{event}.jpg", event=config["event"]),
+        expand("plots/posterior/{event}.jpg", event=config["event"]),
         expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
-        # expand("plots/diagnostics/{event}.jpg", event=config["event"]),
+        expand("plots/diagnostics/{event}.jpg", event=config["event"]),
         expand("non-parametric/{event}_{cbm_model}.p", event=config["event"], cbm_model=config["cbm_model"]),
+        expand("plots/control-points/{event}.jpg", event=config["event"]),
         # expand("plots/datasets/{dataset}.jpg", dataset=config["dataset"]),
-        # expand("data/means/{event}.csv", event=config["event"])
+        expand("data/means/{averages}.csv", averages=config["averages"])
 
 rule sample:
     input:
@@ -44,7 +47,8 @@ rule plot_posterior:
         "plots/posterior/{event}.jpg"
     params:
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
-        event = "{event}"
+        event = "{event}",
+        # start = config["start"]["{event}"]
     script:
         "scripts/plot_posterior.py"
 
@@ -64,8 +68,6 @@ rule get_event_average:
         "data/{event}"
     output:
         "data/means/{event}.csv"
-    params:
-        event = "{event}"
     script:
         "scripts/event_average.py"
 
@@ -92,7 +94,20 @@ rule fit_control_points:
         cbm_model = "{cbm_model}",
         hemisphere = get_param_hem,
     script:
-        "scripts/control_points.py"
+        "scripts/fit_control-points.py"
+
+rule plot_control_points:
+    input:
+        "data/means/{event}.csv",
+        expand("non-parametric/{event}_{cbm_model}.p", event="{event}", cbm_model=config["cbm_model"])
+    output:
+        "plots/control-points/{event}.jpg"
+    params:
+        event = "{event}",
+        cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
+        hemisphere = get_param_hem,
+    script:
+        "scripts/plot_control-points.py"
 
 rule plot_dataset:
     input:
