@@ -1,16 +1,7 @@
 event:
-  # 660BCE: -660
+  660BCE: -660
   993AD: 993
-  # 5259BCE: -5259
-  7176BCE: -7176
-  775AD-early: 775
-  # 775AD-late-N: 775
-  # 5410BCE: -5410
-
-event:
-  660BCE: -669
-  993AD: 990
-  5259BCE: -5271
+  5259BCE: -5259
   7176BCE: -7176
   775AD-early: 775
   775AD-late-N: 775
@@ -36,7 +27,7 @@ hemisphere:
   5410BCE: north
 
 cbm_model:
-  Miyake17: Miyake17
+  # Miyake17: Miyake17
   Brehm21: Brehm21
   Guttler14: Guttler14
   Buntgen18: Buntgen18
