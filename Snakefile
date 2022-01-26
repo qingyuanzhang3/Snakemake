@@ -13,8 +13,8 @@ def get_sample_directory(wildcards):
 def get_plot_dataset_input_directory(wildcards):
     return config["dataset"][wildcards.dataset]
 
-# production_model = "flexible_sinusoid_affine_variant"
-production_model = "flexible_sinusoid"
+production_model = "flexible_sinusoid_affine_variant"
+# production_model = "flexible_sinusoid"
 # production_model = "affine"
 
 rule all:
@@ -22,8 +22,8 @@ rule all:
         expand("plots/posterior/{event}.jpg", event=config["event"]),
         expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
         expand("plots/diagnostics/{event}.jpg", event=config["event"]),
-        expand("non-parametric/{event}_{cbm_model}.p", event=config["event"], cbm_model=config["cbm_model"]),
-        expand("plots/control-points/{event}.jpg", event=config["event"]),
+        # expand("non-parametric/{event}_{cbm_model}.p", event=config["event"], cbm_model=config["cbm_model"]),
+        # expand("plots/control-points/{event}.jpg", event=config["event"]),
         # expand("plots/datasets/{dataset}.jpg", dataset=config["dataset"]),
         expand("data/means/{averages}.csv", averages=config["averages"])
 
