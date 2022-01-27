@@ -10,22 +10,17 @@ def get_param_hem(wildcards):
 def get_sample_directory(wildcards):
     return "data/" + wildcards.event
 
-def get_plot_dataset_input_directory(wildcards):
-    return config["dataset"][wildcards.dataset]
 
 production_model = "flexible_sinusoid_affine_variant"
-# production_model = "flexible_sinusoid"
-# production_model = "affine"
 
 rule all:
     input:
-        expand("plots/posterior/{event}.jpg", event=config["event"]),
-        expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]),
-        expand("plots/diagnostics/{event}.jpg", event=config["event"]),
-        # expand("non-parametric/{event}_{cbm_model}.p", event=config["event"], cbm_model=config["cbm_model"]),
-        # expand("plots/control-points/{event}.jpg", event=config["event"]),
-        # expand("plots/datasets/{dataset}.jpg", dataset=config["dataset"]),
-        expand("data/means/{averages}.csv", averages=config["averages"])
+        expand("plots/posterior/{event}.jpg", event=config["event"]), # posterior
+        expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
+        expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample
+        expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
+        expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
 
 rule sample:
     input:
@@ -48,7 +43,7 @@ rule plot_posterior:
     params:
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
         event = "{event}",
-        # start = config["start"]["{event}"]
+        production_model = production_model,
     script:
         "scripts/plot_posterior.py"
 
@@ -59,7 +54,8 @@ rule plot_diagnostics:
         "plots/diagnostics/{event}_{cbm_model}.jpg"
     params:
         event = "{event}",
-        cbm_model = "{cbm_model}"
+        cbm_model = "{cbm_model}",
+        production_model = production_model,
     script:
         "scripts/chain_diagnostics.py"
 
@@ -83,13 +79,13 @@ rule plot_continuous_d14c:
         production_model = production_model,
         hemisphere = get_param_hem
     script:
-        "scripts/continuous_d14c.py"
+        "scripts/plot_continuous_samples.py"
 
 rule fit_control_points:
     input:
         get_sample_directory
     output:
-        "non-parametric/{event}_{cbm_model}.p"
+        "non-parametric/solutions/{event}_{cbm_model}.p"
     params:
         cbm_model = "{cbm_model}",
         hemisphere = get_param_hem,
@@ -99,7 +95,7 @@ rule fit_control_points:
 rule plot_control_points:
     input:
         "data/means/{event}.csv",
-        expand("non-parametric/{event}_{cbm_model}.p", event="{event}", cbm_model=config["cbm_model"])
+        expand("non-parametric/solutions/{event}_{cbm_model}.p", event="{event}", cbm_model=config["cbm_model"])
     output:
         "plots/control-points/{event}.jpg"
     params:
@@ -109,10 +105,13 @@ rule plot_control_points:
     script:
         "scripts/plot_control-points.py"
 
-rule plot_dataset:
+rule sample_ControlPoints_uncertainty:
     input:
-        get_plot_dataset_input_directory
+        get_sample_directory
     output:
-        "plots/datasets/{dataset}.jpg"
+        "non-parametric/chain/{event}_{cbm_model}.npy"
+    params:
+        cbm_model = "{cbm_model}",
+        hemisphere = get_param_hem,
     script:
-        "scripts/plot_dataset.py"
+        "scripts/sample_ControlPoints.py"

@@ -1,13 +1,19 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-chain = np.load(snakemake.input[0])
-if chain.shape[0] == 4:
+chains = []
+for i in range(len(snakemake.input)):
+    chain = np.load(snakemake.input[i])
+    chains.append(chain)
+
+if snakemake.params.production_model == "simple_sinusoid":
     labels = ["start date (yr)", "duration (yr)", "$\phi$ (yr)", "spike production (atoms/cm$^2$ yr/s)"]
-elif chain.shape[0] == 5:
+elif snakemake.params.production_model == "flexible_sinusoid":
     labels = ["start date (yr)", "duration (yr)", "$\phi$ (yr)", "spike production (atoms/cm$^2$ yr/s)", "solar amplitude (atoms/cm$^2$/s)"]
-else:
+elif snakemake.params.production_model == "flexible_sinusoid_affine_variant":
     labels = ["gradient (atoms/cm$^2$/year$^2$)", "start date (yr)", "duration (yr)", "$\phi$ (yr)", "spike production (atoms/cm$^2$ yr/s)", "solar amplitude (atoms/cm$^2$/s)"]
+else:
+    labels = range(chain.shape[0])
 
 fig, axs = plt.subplots(2, 3, figsize=(18, 8), sharex=True)
 axs = axs.flatten()
