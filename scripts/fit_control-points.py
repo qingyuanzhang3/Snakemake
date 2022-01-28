@@ -1,4 +1,3 @@
-from astropy.table import Table
 from ticktack import fitting
 import pickle
 
