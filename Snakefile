@@ -23,8 +23,8 @@ rule all:
         # expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample
         # expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
         expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
-        # expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
+        # expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
 
 rule sample:
     input:
