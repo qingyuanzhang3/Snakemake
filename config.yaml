@@ -7,6 +7,15 @@ event:
   775AD-late-N: 775
   5410BCE: -5410
 
+event_label:
+  660BCE: 660BCE
+  993AD: 993CE
+  5259BCE: 5259BCE
+  7176BCE: 7176BCE
+  775AD-early: 775CE Early-Rise
+  775AD-late-N: 775CE Late-Rise
+  5410BCE: 5410BCE
+
 averages:
   775AD-early-S: 775
   775AD-early-N: 775
@@ -28,9 +37,14 @@ hemisphere:
 
 cbm_model:
   # Miyake17: Miyake17
-  Brehm21: Brehm21
   Guttler14: Guttler14
   Buntgen18: Buntgen18
+  Brehm21: Brehm21
+
+cbm_label:
+  Güttler et al, 2015: Güttler et al, 2015
+  Büntgen et al, 2018: Büntgen et al, 2018
+  Brehm et al, 2021: Brehm et al, 2021
 
 N_event:
   660BCE: -660

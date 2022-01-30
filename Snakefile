@@ -4,6 +4,9 @@ import os
 def get_param_year(wildcards):
     return float(config["event"][wildcards.event])
 
+def get_param_event_label(wildcards):
+    return config["event_label"][wildcards.event]
+
 def get_param_hem(wildcards):
     return config["hemisphere"][wildcards.event]
 
@@ -16,12 +19,12 @@ production_model = "flexible_sinusoid_affine_variant"
 rule all:
     input:
         expand("plots/posterior/{event}.jpg", event=config["event"]), # posterior
-        expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
+        # expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
         # expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample
         # expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
-        # expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
         expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
-        expand("non-parametric/solutions/{event}_{cbm_model}.p", event=config["event"], cbm_model=config["cbm_model"]),
+        # expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
 
 rule sample:
     input:
@@ -42,8 +45,9 @@ rule plot_posterior:
     output:
         "plots/posterior/{event}.jpg"
     params:
-        cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
-        event = "{event}",
+        year = get_param_year,
+        cbm_label = expand("{cbm_label}", cbm_label=config["cbm_label"]),
+        event_label = get_param_event_label,
         production_model = production_model,
     script:
         "scripts/plot_posterior.py"
@@ -77,7 +81,9 @@ rule plot_continuous_d14c:
     params:
         event = "{event}",
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
+        cbm_label = expand("{cbm_label}", cbm_label=config["cbm_label"]),
         production_model = production_model,
+        event_label = get_param_event_label,
         hemisphere = get_param_hem
     script:
         "scripts/plot_continuous_samples.py"
@@ -86,7 +92,7 @@ rule fit_control_points:
     input:
         get_sample_directory
     output:
-        "non-parametric/solutions/{event}_{cbm_model}.p"
+        "non-parametric/solutions/{event}_{cbm_model}.npy"
     params:
         cbm_model = "{cbm_model}",
         hemisphere = get_param_hem,
@@ -96,12 +102,13 @@ rule fit_control_points:
 rule plot_control_points:
     input:
         "data/means/{event}.csv",
-        expand("non-parametric/solutions/{event}_{cbm_model}.p", event="{event}", cbm_model=config["cbm_model"])
+        expand("non-parametric/solutions/{event}_{cbm_model}.npy", event="{event}", cbm_model=config["cbm_model"])
     output:
         "plots/control-points/{event}.jpg"
     params:
         event = "{event}",
         cbm_model = expand("{cbm_model}", cbm_model=config["cbm_model"]),
+        cbm_label = expand("{cbm_label}", cbm_label=config["cbm_label"]),
         hemisphere = get_param_hem,
     script:
         "scripts/plot_control-points.py"
