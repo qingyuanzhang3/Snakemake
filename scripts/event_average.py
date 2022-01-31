@@ -26,9 +26,11 @@ for file in file_names:
     dc14_data_error[idx] += sf.d14c_data_error**2
     counter[idx] += 1
 
-arr = np.zeros((counter.size, 3))
-arr[:, 0] = time_sampling
-arr[:, 1] = dc14_data / counter
-arr[:, 2] = np.sqrt(dc14_data_error) / counter
+nonzero_entries = counter > 0
+
+arr = np.zeros((counter.size, 3))[nonzero_entries]
+arr[:, 0] = time_sampling[nonzero_entries]
+arr[:, 1] = (dc14_data[nonzero_entries] / counter[nonzero_entries])
+arr[:, 2] = (np.sqrt(dc14_data_error[nonzero_entries]) / counter[nonzero_entries])
 df = pd.DataFrame(arr, columns=['year', 'd14c', 'sig_d14c'])
 df.to_csv(snakemake.output[0], index=False)
