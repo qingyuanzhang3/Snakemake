@@ -1,11 +1,11 @@
 event:
-  # 663BCE: -663
+  663BCE: -663
   993AD: 993
   5259BCE: -5259
-  # 7176BCE: -7176
+  7176BCE: -7176
   775AD-early: 775
   775AD-late-N: 775
-  # 5410BCE: -5410
+  5410BCE: -5410
 
 event_label:
   663BCE: 663BCE
