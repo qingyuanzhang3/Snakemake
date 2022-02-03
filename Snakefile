@@ -115,7 +115,8 @@ rule plot_control_points:
 
 rule sample_ControlPoints_uncertainty:
     input:
-        get_sample_directory
+        get_sample_directory,
+        "non-parametric/solutions/{event}_{cbm_model}.npy"
     output:
         "non-parametric/chain/{event}_{cbm_model}.npy"
     params:
