@@ -21,10 +21,10 @@ rule all:
         # expand("plots/posterior/{event}.jpg", event=config["event"]), # posterior
         # expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
         # expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample
-        expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
-        # expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
-        # expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
+        # expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
+        expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        # expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]),
 
 rule sample:
     input:
