@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from ticktack import fitting
 import matplotlib as mpl
+import matplotlib.font_manager as font_manager
+from matplotlib.lines import Line2D
 mpl.style.use('seaborn-colorblind')
 
 if snakemake.params.year > 0:
@@ -38,8 +40,14 @@ cf = fitting.CarbonFitter()
 fig = cf.plot_multiple_chains(chains, chain.shape[1] * 2,
                         params_labels=labels,
                         labels = snakemake.params.cbm_label,
-                        label_font_size=8,
-                        tick_font_size=8, colors=colors, max_ticks=4
+                        label_font_size=7,
+                        tick_font_size=7, colors=colors, max_ticks=4, legend=False
                         )
 plt.suptitle(snakemake.params.event_label, fontsize=25)
+font = font_manager.FontProperties(family='serif', size=14)
+custom_lines = [Line2D([0], [0], color=colors[i], lw=0, label=snakemake.params.cbm_label[i]) for i in
+                range(len(snakemake.params.cbm_label))]
+ax = fig.get_axes()[5]
+legend = ax.legend(handles=custom_lines, frameon=False, labelcolor=colors,
+                   prop=font, loc="upper right", bbox_to_anchor=(1, 0.5))
 fig.savefig(snakemake.output[0])

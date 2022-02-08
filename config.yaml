@@ -3,8 +3,8 @@ event:
   993AD: 993
   5259BCE: -5259
   7176BCE: -7176
-  775AD-early: 775
-  775AD-late-N: 775
+  775AD-Prolonged: 775
+  775AD-Sharp-N: 775
   5410BCE: -5410
 
 event_label:
@@ -12,8 +12,8 @@ event_label:
   993AD: 993CE
   5259BCE: 5259BCE
   7176BCE: 7176BCE
-  775AD-early: 775CE Early-Rise
-  775AD-late-N: 775CE Late-Rise
+  775AD-Prolonged: 775CE Prolonged-Rise
+  775AD-Sharp-N: 775CE Sharp-Rise
   5410BCE: 5410BCE
 
 averages:
@@ -29,22 +29,22 @@ hemisphere:
   993AD-S: south
   5259BCE: north
   7176BCE: north
-  775AD-early: north
-  775AD-early-N: north
-  775AD-late-N: north
-  775AD-early-S: south
+  775AD-Prolonged: north
+  775AD-Prolonged-N: north
+  775AD-Sharp-N: north
+  775AD-Prolonged-S: south
   5410BCE: north
 
 cbm_model:
   # Miyake17: Miyake17
-  Guttler14: Guttler14
+  Guttler15: Guttler15
   Buntgen18: Buntgen18
   Brehm21: Brehm21
 
 cbm_label:
-  Güttler et al, 2015: Güttler et al, 2015
-  Büntgen et al, 2018: Büntgen et al, 2018
-  Brehm et al, 2021: Brehm et al, 2021
+  Güttler et al, 2015: "Güttler et al, 2015: 11-box"
+  Büntgen et al, 2018: "Büntgen et al, 2018: 22-box"
+  Brehm et al, 2021: "Brehm et al, 2021: 22-box"
 
 N_event:
   660BCE: -660
