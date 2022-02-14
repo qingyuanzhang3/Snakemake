@@ -6,8 +6,8 @@ import pandas as pd
 
 file_names = [f for f in os.listdir(snakemake.input[0]) if os.path.isfile(os.path.join(snakemake.input[0], f))]
 start, end = np.inf, -np.inf
-cbm = ticktack.load_presaved_model('Guttler14', production_rate_units = 'atoms/cm^2/s')
-sf = fitting.SingleFitter(cbm, cbm_model='Guttler14')
+cbm = ticktack.load_presaved_model('Guttler15', production_rate_units = 'atoms/cm^2/s')
+sf = fitting.SingleFitter(cbm, cbm_model='Guttler15')
 for file in file_names:
     sf.load_data(snakemake.input[0] + "/" + file)
     if sf.start < start:
