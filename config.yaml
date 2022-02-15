@@ -4,7 +4,7 @@ event:
   5259BCE: -5259
   7176BCE: -7176
   775AD-Prolonged: 775
-  775AD-Sharp-N: 775
+  775AD-Sharp: 775
   5410BCE: -5410
 
 event_label:
@@ -13,12 +13,12 @@ event_label:
   5259BCE: 5259BCE
   7176BCE: 7176BCE
   775AD-Prolonged: 775CE Prolonged-Rise
-  775AD-Sharp-N: 775CE Sharp-Rise
+  775AD-Sharp: 775CE Sharp-Rise
   5410BCE: 5410BCE
 
 averages:
-  775AD-early-S: 775
-  775AD-early-N: 775
+  775AD-Prolonged-S: 775
+  775AD-Prolonged-N: 775
   993AD-S: 993
   993AD-N: 993
 
@@ -31,7 +31,7 @@ hemisphere:
   7176BCE: north
   775AD-Prolonged: north
   775AD-Prolonged-N: north
-  775AD-Sharp-N: north
+  775AD-Sharp: north
   775AD-Prolonged-S: south
   5410BCE: north
 
@@ -45,35 +45,3 @@ cbm_label:
   Güttler et al, 2015: "Güttler et al, 2015: 11-box"
   Büntgen et al, 2018: "Büntgen et al, 2018: 22-box"
   Brehm et al, 2021: "Brehm et al, 2021: 22-box"
-
-AD775:
-  Büntgen18_ALT01: north
-  Büntgen18_GRE02: north
-  Büntgen18_RUS15: north
-  Büntgen18_SWE02: north
-  Büntgen18_AUT02: north
-  Büntgen18_MON09: north
-  Büntgen18_RUS17: north
-  Büntgen18_TIB01: north
-  Büntgen18_CAN06: north
-  Büntgen18_PAK04: north
-  Büntgen18_RUS20: north
-  Büntgen18_DAR01: south
-  Büntgen18_DAR07: south
-  Büntgen18_PAT03: south
-  Büntgen18_DAR06: south
-  Büntgen18_PAT02: south
-  Büntgen18_TAS01: south
-  Büntgen18_CHN01: north
-  Büntgen18_JAP01: north
-  Büntgen18_SWE05: north
-  Büntgen18_USA18: north
-  Scifo19_Oak: north
-  Büntgen18_GER01: north
-  Büntgen18_MON03: north
-  Büntgen18_USA02: north
-  Guttler15_Kauri: north
-  Büntgen18_GER07: north
-  Büntgen18_RUS04: north
-  Büntgen18_USA11: north
-  Miyake12_Cedar: north
