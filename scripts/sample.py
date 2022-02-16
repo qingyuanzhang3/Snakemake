@@ -1,7 +1,6 @@
 import numpy as np
 from ticktack import fitting
 
-assert snakemake.params.event == "5259BCE"
 if snakemake.params.event == "5259BCE":
     params = np.array([-8.28506168e-03, -5.25965399e+03,  4.66141251e-01,
     3.09932956e+00, 6.24373446e+00,  2.51351680e-02])
