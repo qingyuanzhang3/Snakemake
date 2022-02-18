@@ -16,21 +16,58 @@ def get_sample_directory(wildcards):
 def get_cp_directory(wildcards):
     return "data-CP/" + wildcards.event
 
+def get_sample_path_prolonged(wildcards):
+    return "data/775AD-Prolonged/" + wildcards.event + ".csv"
+
+def get_sample_path_sharp(wildcards):
+    return "data/775AD-Sharp/" + wildcards.event + ".csv"
+
 production_model = "flexible_sinusoid_affine_variant"
 
 rule all:
     input:
-        expand("plots/posterior/{event}.pdf", event=config["event"]), # posterior
-        # expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
-        expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample plot
-        # expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
-        expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        # expand("data/means/{event}.csv", event=config["event"]), # supplementary mean csv
-        expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        # expand("data-CP/means/{event}.csv", event=config["event"]), # supplementary mean csv
-        expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
-        expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
-        expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), #
+        # expand("plots/posterior/{event}.pdf", event=config["event"]), # posterior
+        ## expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
+        # expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample plot
+        ## expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
+        # expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        ## expand("data/means/{event}.csv", event=config["event"]), # supplementary mean csv
+        # expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        ## expand("data-CP/means/{event}.csv", event=config["event"]), # supplementary mean csv
+        # expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
+        # expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
+        # expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
+        expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
+        expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
+
+rule sample_sharp:
+    input:
+        get_sample_path_sharp,
+        expand("chain/775AD-Sharp_{cbm_model}.npy", cbm_model=config["cbm_model"])
+    output:
+        "individual_chain/Sharp_chain/{event}_{cbm_model}.npy"
+    params:
+        year = 775,
+        cbm_model = "{cbm_model}",
+        production_model = "simple_sinusoid_sharp",
+        hemisphere = "north"
+    script:
+        "scripts/individual_sample.py"
+
+rule sample_prolonged:
+    input:
+        get_sample_path_prolonged,
+        expand("chain/775AD-Prolonged_{cbm_model}.npy", cbm_model=config["cbm_model"])
+    output:
+        "individual_chain/Prolonged_chain/{event}_{cbm_model}.npy"
+    params:
+        year = 775,
+        cbm_model = "{cbm_model}",
+        production_model = "simple_sinusoid_prolonged",
+        hemisphere = "north"
+    script:
+        "scripts/individual_sample.py"
+
 rule sample:
     input:
         get_sample_directory

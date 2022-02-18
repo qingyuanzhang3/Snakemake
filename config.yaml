@@ -45,3 +45,29 @@ cbm_label:
   Güttler et al, 2015: "Güttler et al, 2015: 11-box"
   Büntgen et al, 2018: "Büntgen et al, 2018: 22-box"
   Brehm et al, 2021: "Brehm et al, 2021: 22-box"
+
+Prolonged:
+  Büntgen18_ALT01: north
+  Büntgen18_GRE02: north
+  Büntgen18_RUS15: north
+  Büntgen18_SWE02: north
+  Büntgen18_AUT02: north
+  Büntgen18_MON09: north
+  Büntgen18_RUS17: north
+  Büntgen18_TIB01: north
+  Büntgen18_CAN06: north
+  Büntgen18_PAK04: north
+  Büntgen18_RUS20: north
+  Büntgen18_RUS04: north
+  Uusitalo18_Pine: north
+
+Sharp:
+  Büntgen18_CHN01: north
+  Büntgen18_JAP01: north
+  Büntgen18_SWE05: north
+  Büntgen18_USA18: north
+  Büntgen18_GER01: north
+  Büntgen18_MON03: north
+  Büntgen18_USA02: north
+  Büntgen18_GER07: north
+  Büntgen18_USA11: north
