@@ -26,19 +26,19 @@ production_model = "flexible_sinusoid_affine_variant"
 
 rule all:
     input:
-        # expand("plots/posterior/{event}.pdf", event=config["event"]), # posterior
+        expand("plots/posterior/{event}.pdf", event=config["event"]), # posterior
         ## expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
-        # expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample plot
+        expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample plot
         ## expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
-        # expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
         ## expand("data/means/{event}.csv", event=config["event"]), # supplementary mean csv
-        # expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
         ## expand("data-CP/means/{event}.csv", event=config["event"]), # supplementary mean csv
-        # expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
-        # expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
-        # expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
-        expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
-        expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
+        expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
+        expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
+        # expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
+        # expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
 
 rule sample_sharp:
     input:
