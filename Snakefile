@@ -32,13 +32,13 @@ rule all:
         ## expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
         expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
         ## expand("data/means/{event}.csv", event=config["event"]), # supplementary mean csv
-        # expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
         ## expand("data-CP/means/{event}.csv", event=config["event"]), # supplementary mean csv
-        # expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
-        # expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
-        # expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
-        # expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
-        # expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
+        expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
+        expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
+        expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
+        expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
 
 rule sample_sharp:
     input:
