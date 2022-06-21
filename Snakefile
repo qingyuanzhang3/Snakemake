@@ -39,6 +39,7 @@ rule all:
         expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
         expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
         expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
+        "plots/duration/event_duration.pdf",
 
 rule sample_sharp:
     input:
@@ -94,6 +95,14 @@ rule plot_posterior:
         production_model = production_model,
     script:
         "scripts/plot_posterior.py"
+
+rule plot_duration:
+    input:
+        expand("chain/{event}_{cbm_model}.npy", event="{event}", cbm_model=config["cbm_model"])
+    output:
+        "plots/duration/event_duration.pdf"
+    script:
+        "scripts/plot_duration.py"
 
 rule plot_diagnostics:
     input:
