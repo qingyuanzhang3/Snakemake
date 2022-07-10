@@ -26,20 +26,24 @@ production_model = "flexible_sinusoid_affine_variant"
 
 rule all:
     input:
-        expand("plots/posterior/{event}.pdf", event=config["event"]), # posterior
-        ## expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
         expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample plot
-        ## expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
         expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        ## expand("data/means/{event}.csv", event=config["event"]), # supplementary mean csv
         expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        ## expand("data-CP/means/{event}.csv", event=config["event"]), # supplementary mean csv
         expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
         expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
         expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
         expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
         expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
-        "plots/duration/event_duration.pdf",
+        "plots/f4/event_duration.pdf",
+        "plots/f5/solar_density.pdf",
+        "plots/f3/production_density.pdf",
+        "plots/f2/non-parametric.pdf",
+        "plots/f1/parametric-fit.pdf",
+        expand("plots/f10-16/{event}.pdf", event=config["event"]), # posterior
+        # ## expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
+        # ## expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
+        ## expand("data/means/{event}.csv", event=config["event"]), # supplementary mean csv
+        ## expand("data-CP/means/{event}.csv", event=config["event"]), # supplementary mean csv
 
 rule sample_sharp:
     input:
@@ -87,7 +91,7 @@ rule plot_posterior:
     input:
         expand("chain/{event}_{cbm_model}.npy", event="{event}", cbm_model=config["cbm_model"])
     output:
-        "plots/posterior/{event}.pdf"
+        "plots/f10-16/{event}.pdf"
     params:
         year = get_param_year,
         cbm_label = expand("{cbm_label}", cbm_label=config["cbm_label"].values()),
@@ -98,11 +102,54 @@ rule plot_posterior:
 
 rule plot_duration:
     input:
-        expand("chain/{event}_{cbm_model}.npy", event="{event}", cbm_model=config["cbm_model"])
+        expand("chain/{event}_{cbm_model}.npy", event=config["event"],
+        cbm_model=config["cbm_model"])
     output:
-        "plots/duration/event_duration.pdf"
+        "plots/f4/event_duration.pdf"
     script:
         "scripts/plot_duration.py"
+
+rule plot_production:
+    input:
+        expand("chain/{event}_{cbm_model}.npy", event=config["event"],
+        cbm_model=config["cbm_model"])
+    output:
+        "plots/f3/production_density.pdf"
+    script:
+        "scripts/plot_production.py"
+
+rule plot_non_parametric_fit:
+    input:
+        expand("non-parametric/solutions/{event}_{cbm_model}.npy",
+        event=config["event"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/solver/{event}_{cbm_model}.npy",
+        event=config["event"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/chain/{event}_{cbm_model}.npy",
+        event=config["event"], cbm_model=config["cbm_model"]),
+    output:
+        "plots/f2/non-parametric.pdf"
+    script:
+        "scripts/plot_non-param-fit.py"
+
+rule plot_parametric_fit:
+    input:
+        expand("chain/{event}_{cbm_model}.npy", event=config["event"],
+        cbm_model=config["cbm_model"]),
+        expand("data/means/{event}.csv", event=config["event"])
+    output:
+        "plots/f1/parametric-fit.pdf"
+    script:
+        "scripts/plot_param-fit.py"
+
+
+rule plot_solar:
+    input:
+        expand("chain/{event}_{cbm_model}.npy", event=config["event"],
+        cbm_model=config["cbm_model"])
+    output:
+        "plots/f5/solar_density.pdf"
+    script:
+        "scripts/plot_solar.py"
 
 rule plot_diagnostics:
     input:
