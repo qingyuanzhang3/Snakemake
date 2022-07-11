@@ -31,7 +31,7 @@ rule all:
         expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
         expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
         expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
-        expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # inverse solver
+        expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event_hemisphere"], cbm_model=config["cbm_model"]), # inverse solver
         expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
         expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
         "plots/f4/event_duration.pdf",
@@ -39,6 +39,7 @@ rule all:
         "plots/f3/production_density.pdf",
         "plots/f2/non-parametric.pdf",
         "plots/f1/parametric-fit.pdf",
+        "plots/f6/latitude_trends.pdf",
         expand("plots/f10-16/{event}.pdf", event=config["event"]), # posterior
         # ## expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
         # ## expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
@@ -120,12 +121,11 @@ rule plot_production:
 
 rule plot_non_parametric_fit:
     input:
-        expand("non-parametric/solutions/{event}_{cbm_model}.npy",
-        event=config["event"], cbm_model=config["cbm_model"]),
-        expand("non-parametric/solver/{event}_{cbm_model}.npy",
-        event=config["event"], cbm_model=config["cbm_model"]),
-        expand("non-parametric/chain/{event}_{cbm_model}.npy",
-        event=config["event"], cbm_model=config["cbm_model"]),
+        # expand("non-parametric/solutions/{event}_{cbm_model}.npy",
+        # event=config["event"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event_hemisphere"], cbm_model=config["cbm_model"]),
+        # expand("non-parametric/chain/{event}_{cbm_model}.npy",
+        # event=config["event"], cbm_model=config["cbm_model"]),
     output:
         "plots/f2/non-parametric.pdf"
     script:
@@ -150,6 +150,15 @@ rule plot_solar:
         "plots/f5/solar_density.pdf"
     script:
         "scripts/plot_solar.py"
+
+rule plot_latitude:
+    input:
+        expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
+        expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
+    output:
+        "plots/f6/latitude_trends.pdf"
+    script:
+        "scripts/plot_latitude.py"
 
 rule plot_diagnostics:
     input:
@@ -234,7 +243,7 @@ rule sample_ControlPoints_uncertainty:
 
 rule sample_inverse_solver:
     input:
-        "data-CP/means/{event}.csv"
+        "data-CP/means/{event}.csv",
     output:
         "non-parametric/solver/{event}_{cbm_model}.npy"
     params:

@@ -35,6 +35,19 @@ hemisphere:
   775AD-Prolonged-S: south
   5410BCE: north
 
+event_hemisphere:
+  663BCE: -663
+  993AD: 993
+  5259BCE: -5259
+  7176BCE: -7176
+  775AD-Prolonged: 775
+  775AD-Sharp: 775
+  5410BCE: -5410
+  775AD-Prolonged-S: 775
+  775AD-Prolonged-N: 775
+  993AD-S: 993
+  993AD-N: 993
+
 cbm_model:
   # Miyake17: Miyake17
   Guttler15: Guttler15
