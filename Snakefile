@@ -121,11 +121,11 @@ rule plot_production:
 
 rule plot_non_parametric_fit:
     input:
-        # expand("non-parametric/solutions/{event}_{cbm_model}.npy",
-        # event=config["event"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/solutions/{event}_{cbm_model}.npy",
+        event=config["event"], cbm_model=config["cbm_model"]),
         expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event_hemisphere"], cbm_model=config["cbm_model"]),
-        # expand("non-parametric/chain/{event}_{cbm_model}.npy",
-        # event=config["event"], cbm_model=config["cbm_model"]),
+        expand("non-parametric/chain/{event}_{cbm_model}.npy",
+        event=config["event"], cbm_model=config["cbm_model"]),
     output:
         "plots/f2/non-parametric.pdf"
     script:
