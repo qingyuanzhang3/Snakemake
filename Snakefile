@@ -34,7 +34,7 @@ rule all:
         # expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event_hemisphere"], cbm_model=config["cbm_model"]), # inverse solver
         # expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
         # expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
-        "plots/f4/duration_density.pdf",
+        # "plots/f4/duration_density.pdf",
         # "plots/f5/solar_cycle_density.pdf",
         # "plots/f3/production_density.pdf",
         # "plots/f2/nonparametric-fit.pdf",
