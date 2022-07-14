@@ -11,12 +11,12 @@ mpl.style.use('seaborn-colorblind')
 def arrival_solar2(start, phi):
     return (start + phi  + 11/4) % 11
 
-events = ["775AD-Sharp", "993AD", "5410BCE", "5259BCE"]
-titles = ["775CE", "993CE", "5410BCE", "5259BCE"]
+events = ["775AD-Sharp", "5259BCE", "5410BCE"]
+titles = ["775CE", "5259BCE", "5410BCE"]
 cbm_models = ["Guttler15", "Buntgen18", "Brehm21",]
 cbm_names = ["Güttler et al, 2015: 11-box", "Büntgen et al, 2018: 22-box", "Brehm et al, 2021: 22-box"]
 colors = ['#0072B2', '#009E73', '#D55E00', '#CC79A7', '#e41a1c', '#56B4E9', '#999999', ]
-colors = ['#0072B2', '#D55E00', '#56B4E9', '#999999',]
+colors = ['#0072B2', '#D55E00', '#56B4E9']
 
 Guttler15 = np.zeros((12000, len(events)))
 Buntgen18 = np.zeros((12000, len(events)))
