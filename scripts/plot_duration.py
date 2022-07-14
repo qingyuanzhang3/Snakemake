@@ -27,5 +27,6 @@ for j, model in enumerate(models):
         sns.kdeplot(data[:, 2], ls=fmt[j], color=colors[i], ax=ax, bw_adjust=2, clip=(0, 5));
 
 ax.legend(handles=custom_lines, frameon=False, fontsize=10, loc="upper right");
+ax.set_xlim(0, 5)
 fig.supxlabel("event duration (years)", fontsize=12, fontfamily="serif", fontweight="roman");
 fig.savefig(snakemake.output[0])
