@@ -87,7 +87,7 @@ def sp_event(ax0, ax1, title=None, sp_event=None):
     sf.load_data("data/means/" + event + ".csv")
     ax0.set_title(title, fontsize=14, fontfamily="serif",fontweight="roman")
     ax1.set_ylim(1, 10);
-    ax1.set_xlim(np.min(sf.time_data)-0.2, np.max(sf.time_data)+0.2);
+    ax1.set_xlim(np.min(sf.time_data), np.max(sf.time_data)+0.2);
 
 
 

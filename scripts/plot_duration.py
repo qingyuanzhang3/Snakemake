@@ -9,8 +9,10 @@ mpl.style.use('seaborn-colorblind')
 
 cbm_names = ["Güttler et al, 2015: 11-box", "Büntgen et al, 2018: 22-box", "Brehm et al, 2021: 22-box"]
 colors = ['#0072B2', '#009E73', '#D55E00', '#CC79A7', '#e41a1c', '#56B4E9', '#999999', ]
-events = ["663BCE", "775AD-Sharp", "775AD-Prolonged", "993AD", "5410BCE", "5259BCE", "7176BCE"]
-event_labels = ["663BCE", "775CE Sharp Rise", "775CE Prolonged Rise", "993CE", "5410BCE", "5259BCE", "7176BCE"]
+# events = ["663BCE", "775AD-Sharp", "775AD-Prolonged", "993AD", "5410BCE", "5259BCE", "7176BCE"]
+# event_labels = ["663BCE", "775CE Sharp Rise", "775CE Prolonged Rise", "993CE", "5410BCE", "5259BCE", "7176BCE"]
+events = ["775AD-Sharp", "775AD-Prolonged", "993AD", "663BCE", "5259BCE", "5410BCE", "7176BCE"]
+event_labels = ["775CE Sharp-Rise", "775CE Prolonged-Rise", "993CE", "663BCE", "5259BCE", "5410BCE", "7176BCE"]
 models = ["Guttler15", "Buntgen18", "Brehm21"]
 fmt = ["-", "--", ":"]
 custom_lines = [Line2D([0], [0], color=colors[i], lw=1.5, label=event_labels[i]) for i in range(len(event_labels))] + \
