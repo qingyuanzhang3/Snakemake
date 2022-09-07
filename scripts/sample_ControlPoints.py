@@ -8,6 +8,6 @@ mf, sampler = fitting.fit_event(None,
                                 production_model="control_points",
                                 params=soln,
                                 hemisphere=snakemake.params.hemisphere,
-                                sampler="MCMC", burnin=100, production=500,
+                                sampler="MCMC", burnin=200, production=300,
                                 oversample=1008, burnin_time=2000)
 np.save(snakemake.output[0], sampler)
