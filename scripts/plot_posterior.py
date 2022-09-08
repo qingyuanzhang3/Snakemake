@@ -14,18 +14,30 @@ chains = []
 for i in range(len(snakemake.input)):
     chain = np.load(snakemake.input[i])
     chains.append(chain)
+
 if snakemake.params.production_model == "simple_sinusoid":
     labels = [start_date, "duration (yr)", "spike production (atoms/cm$^2$ yr/s)", "$\phi$ (yr)"]
     idx = 0
     spike_idx  = 3
+    for i in range(len(snakemake.input)):
+        chains[i][:, 1] = 10**chains[i][:, 1]
+        chains[i][:, -1] = 10 ** chains[i][:, -1]
 elif snakemake.params.production_model == "flexible_sinusoid":
     labels = [start_date, "duration (yr)", "spike production (atoms/cm$^2$ yr/s)", "$\phi$ (yr)", "solar amplitude (atoms/cm$^2$/s)"]
     idx = 0
     spike_idx  = 3
+    for i in range(len(snakemake.input)):
+        chains[i][:, 1] = 10**chains[i][:, 1]
+        chains[i][:, -1] = 10 ** chains[i][:, -1]
+        chains[i][:, -2] = 10 ** chains[i][:, -2]
 elif snakemake.params.production_model == "flexible_sinusoid_affine_variant":
     labels = ["gradient (atoms/cm$^2$/year$^2$)", start_date, "duration (yr)", "spike production (atoms/cm$^2$ yr/s)", "$\phi$ (yr)", "solar amplitude (atoms/cm$^2$/s)"]
     idx = 1
     spike_idx  = 4
+    for i in range(len(snakemake.input)):
+        chains[i][:, 2] = 10**chains[i][:, 2]
+        chains[i][:, -1] = 10 ** chains[i][:, -1]
+        chains[i][:, -2] = 10 ** chains[i][:, -2]
 else:
     labels = None
 

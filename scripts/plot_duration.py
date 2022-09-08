@@ -26,6 +26,7 @@ for j, model in enumerate(models):
     data = []
     for i, event in enumerate(events):
         data = np.load("chain/" + event + "_" + model + ".npy")
+        data[:, 2] = 10**data[:, 2]
         sns.kdeplot(data[:, 2], ls=fmt[j], color=colors[i], ax=ax, bw_adjust=2, clip=(0, 5));
 
 ax.legend(handles=custom_lines, frameon=False, fontsize=10, loc="upper right");
