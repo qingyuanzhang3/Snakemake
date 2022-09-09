@@ -39,8 +39,10 @@ for cbm_model in cbm_models:
 Buntgen18 = np.zeros((6000, len(events)))
 for i, event in enumerate(events_prolonged):
     Buntgen18[:, i] = np.load("individual_chain/Prolonged_chain/{}_Buntgen18.npy".format(event))[:, 2]
+    Buntgen18[:, i] = 10**Buntgen18[:, i]
 for i, event in enumerate(events_sharp):
     Buntgen18[:, i + len(events_prolonged)] = np.load("individual_chain/Sharp_chain/{}_Buntgen18.npy".format(event))[:, 2]
+    Buntgen18[:, i + len(events_prolonged)] = 10**Buntgen18[:, i + len(events_prolonged)]
 Buntgen18 = Buntgen18 / steady_state[1]
 def log_likelihood(theta, x, y, yerr):
     m, b, log_f = theta
@@ -94,11 +96,11 @@ plt.plot(x0,all_models.mean(axis=0),color='k')
 plt.fill_between(x0,lower,upper,alpha=0.2,color='k')
 plt.xlabel("Latitude (degrees N)", fontfamily="serif", fontsize=14)
 plt.ylabel("Spike production in SS yr", fontfamily="serif", fontsize=14)
-plt.text(31, 3.2, "JAP")
-plt.text(66, 4.4, "LAP")
-plt.text(39, 2.7, "CAL")
+plt.text(31, 2.5, "JAP")
+plt.text(66, 4.3, "LAP")
+plt.text(39, 2.0, "CAL")
 plt.text(51, 3.8, "ALT")
-plt.text(46, 3.93, "GER")
-plt.text(65, 3.93, "YAM")
+plt.text(50, 3.1, "GER")
+plt.text(65, 3.7, "YAM")
 plt.xlim(x0.min(),x0.max())
 plt.savefig(snakemake.output[0], bbox_inches='tight')

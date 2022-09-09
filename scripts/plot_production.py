@@ -30,11 +30,14 @@ if units == "atoms":
 else:
     conversion = 14.003242 / 6.022 * 5.11 * 31536. / 1e5
 for i, event in enumerate(events):
-    Guttler15[:, i] = np.load("chain/{}_Guttler15.npy".format(event))[:, 4] * conversion
+    Guttler15[:, i] = np.load("chain/{}_Guttler15.npy".format(event))[:, 4]
+    Guttler15[:, i] = 10**Guttler15[:, i] * conversion
 for i, event in enumerate(events):
-    Buntgen18[:, i] = np.load("chain/{}_Buntgen18.npy".format(event))[:, 4] * conversion
+    Buntgen18[:, i] = np.load("chain/{}_Buntgen18.npy".format(event))[:, 4]
+    Buntgen18[:, i] = 10 ** Buntgen18[:, i] * conversion
 for i, event in enumerate(events):
-    Brehm21[:, i] = np.load("chain/{}_Brehm21.npy".format(event))[:, 4] * conversion
+    Brehm21[:, i] = np.load("chain/{}_Brehm21.npy".format(event))[:, 4]
+    Brehm21[:, i] = 10 ** Brehm21[:, i] * conversion
 
 fmt = ["-", "--", ":"]
 custom_lines = [Line2D([0], [0], ls=fmt[i], color="k", lw=1.5, label=cbm_names[i]) for i in range(len(cbm_names))]
