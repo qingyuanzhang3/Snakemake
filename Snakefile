@@ -41,10 +41,20 @@ rule all:
         "plots/f1/parametric-fit.pdf",
         "plots/f6/latitude_trends.pdf",
         expand("plots/f10-16/{event}.pdf", event=config["event"]), # posterior
+        "proportions.txt",
         ## expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
         ## expand("plots/control-points/{event}.jpg", event=config["event"]), # control-points plot
         # expand("data/means/{event}.csv", event=config["event"]), # supplementary mean csv
         # expand("data-CP/means/{event}.csv", event=config["event"]), # supplementary mean csv
+
+
+rule compute_proportions:
+    input:
+        expand("chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"])
+    output:
+        "proportions.txt"
+    script:
+        "scripts/compute_proportions.py"
 
 rule sample_sharp:
     input:
