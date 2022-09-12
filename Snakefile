@@ -28,18 +28,18 @@ rule all:
     input:
         expand("plots/diagnostics/{event}.jpg", event=config["event"]), # continuous sample plot
         expand("data/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
-        expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
-        expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
-        expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event_hemisphere"], cbm_model=config["cbm_model"]), # inverse solver
-        expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
-        expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
-        "plots/f4/duration_density.pdf",
-        "plots/f5/solar_cycle_density.pdf",
-        "plots/f3/production_density.pdf",
-        "plots/f2/nonparametric-fit.pdf",
-        "plots/f1/parametric-fit.pdf",
-        "plots/f6/latitude_trends.pdf",
+        # expand("data-CP/means/{averages}.csv", averages=config["averages"]), # supplementary mean csv
+        # expand("non-parametric/chain/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point chain
+        # expand("non-parametric/solutions/{event}_{cbm_model}.npy", event=config["event"], cbm_model=config["cbm_model"]), # control-point solution
+        # expand("non-parametric/solver/{event}_{cbm_model}.npy", event=config["event_hemisphere"], cbm_model=config["cbm_model"]), # inverse solver
+        # expand("individual_chain/Prolonged_chain/{event}_{cbm_model}.npy", event=config["Prolonged"], cbm_model=config["cbm_model"]),
+        # expand("individual_chain/Sharp_chain/{event}_{cbm_model}.npy", event=config["Sharp"], cbm_model=config["cbm_model"]),
+        # "plots/f4/duration_density.pdf",
+        # "plots/f5/solar_cycle_density.pdf",
+        # "plots/f3/production_density.pdf",
+        # "plots/f2/nonparametric-fit.pdf",
+        # "plots/f1/parametric-fit.pdf",
+        # "plots/f6/latitude_trends.pdf",
         expand("plots/f10-16/{event}.pdf", event=config["event"]), # posterior
         "proportions.txt",
         ## expand("plots/diagnostics/{event}_{cbm_model}.jpg", event=config["event"], cbm_model=config["cbm_model"]), # chain plot
