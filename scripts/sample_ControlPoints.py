@@ -9,5 +9,5 @@ mf, sampler = fitting.fit_event(None,
                                 params=soln,
                                 hemisphere=snakemake.params.hemisphere,
                                 sampler="MCMC", burnin=200, production=300,
-                                oversample=1008, burnin_time=2000, verbose=True)
+                                oversample=1008, burnin_time=2000)
 np.save(snakemake.output[0], sampler)
