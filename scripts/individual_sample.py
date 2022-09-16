@@ -14,7 +14,7 @@ if snakemake.params.production_model == "simple_sinusoid_sharp":
         start_time, log_duration, log_area = jnp.array(list(args)).reshape(-1)
         duration, area = 10**log_duration, 10**log_area
         height = sf.super_gaussian(t, start_time, duration, area)
-        production = sf.steady_state_production + mle[-1] * sf.steady_state_production * jnp.sin(
+        production = sf.steady_state_production + 10**mle[-1] * sf.steady_state_production * jnp.sin(
             2 * np.pi / 11 * t + mle[3] * 2 * np.pi / 11) + height
         return production
     model = simple_sinusoid_sharp
@@ -26,7 +26,7 @@ else:
         start_time, log_duration, log_area = jnp.array(list(args)).reshape(-1)
         duration, area = 10 ** log_duration, 10 ** log_area
         height = sf.super_gaussian(t, start_time, duration, area)
-        production = sf.steady_state_production + mle[-1] * sf.steady_state_production * jnp.sin(
+        production = sf.steady_state_production + 10**mle[-1] * sf.steady_state_production * jnp.sin(
             2 * np.pi / 11 * t + mle[3] * 2 * np.pi / 11) + height
         return production
     model = simple_sinusoid_prolonged

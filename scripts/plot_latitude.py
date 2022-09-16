@@ -89,6 +89,9 @@ for j, ind in enumerate(inds):
 lower, mid, upper = np.percentile(all_models,(16,50,84),axis=0)
 plt.figure(figsize=(9, 6), dpi=80)
 
+lines = np.percentile(flat_samples[:,0],(16,50,84))
+print('%.1f +- %.1f' % (1e3*np.mean(flat_samples[:,0]), 1e3*np.std(flat_samples[:,0])))
+
 x0 = np.linspace(x.min()-5,x.max()+5,1000)
 
 plt.errorbar(np.array(lat), np.mean(Buntgen18, axis=0), yerr=np.std(Buntgen18, axis=0), fmt="o", capsize=3)
