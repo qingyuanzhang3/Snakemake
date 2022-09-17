@@ -48,8 +48,8 @@ for i in range(len(events)):
 ax.legend(handles=custom_lines, frameon=False, fontsize=10, loc="upper right");
 
 plt.text(x=-0.8, y=0.9, s=titles[0], color=colors[0])
-plt.text(x=3.4, y=0.73, s=titles[1], color=colors[1])
-plt.text(x=6, y=0.3, s=titles[2], color=colors[2])
+plt.text(x=3, y=0.6, s=titles[1], color=colors[1])
+plt.text(x=6, y=0.5, s=titles[2], color=colors[2])
 
 fig.supxlabel("Start Date relative to Solar Maximum (yr)",
               fontsize=14, fontfamily="serif", fontweight="roman");

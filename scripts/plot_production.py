@@ -51,12 +51,12 @@ for i in range(0, 7):
 ax.legend(handles=custom_lines, frameon=False, fontsize=10, loc="upper left");
 
 plt.text(x=2.65, y=4, s=titles[0], color=colors[0])
-plt.text(x=2.65, y=2.8, s=titles[1], color=colors[1])
-plt.text(x=1.15, y=2.45, s=titles[2], color=colors[2])
-plt.text(x=2.4, y=5, s=titles[3], color=colors[3])
-plt.text(x=4.3, y=3, s=titles[4], color=colors[4])
-plt.text(x=0.7, y=3.4, s=titles[5], color=colors[5])
-plt.text(x=3.6, y=4.8, s=titles[6], color=colors[6])
+plt.text(x=2.65, y=5, s=titles[1], color=colors[1])
+plt.text(x=1.3, y=2.45, s=titles[2], color=colors[2])
+plt.text(x=2.2, y=5, s=titles[3], color=colors[3])
+plt.text(x=4.2, y=3, s=titles[4], color=colors[4])
+plt.text(x=0.7, y=3.6, s=titles[5], color=colors[5])
+plt.text(x=3.7, y=4.7, s=titles[6], color=colors[6])
 
 
 fig.supxlabel("spike production (years of steady state production)", fontsize=16, fontfamily="serif", fontweight="roman");
