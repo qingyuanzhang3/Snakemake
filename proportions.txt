@@ -1,0 +1,63 @@
+chain/663BCE_Guttler15.npy
+<0.5 | 0.5 - 1 | > 1 : 0.00 | 0.01 | 0.99 
+
+chain/663BCE_Buntgen18.npy
+<0.5 | 0.5 - 1 | > 1 : 0.00 | 0.00 | 1.00 
+
+chain/663BCE_Brehm21.npy
+<0.5 | 0.5 - 1 | > 1 : 0.00 | 0.00 | 1.00 
+
+chain/993AD_Guttler15.npy
+<0.5 | 0.5 - 1 | > 1 : 0.84 | 0.13 | 0.03 
+
+chain/993AD_Buntgen18.npy
+<0.5 | 0.5 - 1 | > 1 : 0.61 | 0.23 | 0.16 
+
+chain/993AD_Brehm21.npy
+<0.5 | 0.5 - 1 | > 1 : 0.73 | 0.21 | 0.06 
+
+chain/5259BCE_Guttler15.npy
+<0.5 | 0.5 - 1 | > 1 : 0.93 | 0.04 | 0.03 
+
+chain/5259BCE_Buntgen18.npy
+<0.5 | 0.5 - 1 | > 1 : 0.94 | 0.06 | 0.00 
+
+chain/5259BCE_Brehm21.npy
+<0.5 | 0.5 - 1 | > 1 : 0.96 | 0.03 | 0.00 
+
+chain/7176BCE_Guttler15.npy
+<0.5 | 0.5 - 1 | > 1 : 0.83 | 0.16 | 0.01 
+
+chain/7176BCE_Buntgen18.npy
+<0.5 | 0.5 - 1 | > 1 : 0.78 | 0.21 | 0.01 
+
+chain/7176BCE_Brehm21.npy
+<0.5 | 0.5 - 1 | > 1 : 0.78 | 0.21 | 0.01 
+
+chain/775AD-Prolonged_Guttler15.npy
+<0.5 | 0.5 - 1 | > 1 : 0.00 | 0.00 | 1.00 
+
+chain/775AD-Prolonged_Buntgen18.npy
+<0.5 | 0.5 - 1 | > 1 : 0.00 | 0.00 | 1.00 
+
+chain/775AD-Prolonged_Brehm21.npy
+<0.5 | 0.5 - 1 | > 1 : 0.00 | 0.00 | 1.00 
+
+chain/775AD-Sharp_Guttler15.npy
+<0.5 | 0.5 - 1 | > 1 : 0.87 | 0.13 | 0.00 
+
+chain/775AD-Sharp_Buntgen18.npy
+<0.5 | 0.5 - 1 | > 1 : 0.96 | 0.04 | 0.00 
+
+chain/775AD-Sharp_Brehm21.npy
+<0.5 | 0.5 - 1 | > 1 : 0.95 | 0.05 | 0.00 
+
+chain/5410BCE_Guttler15.npy
+<0.5 | 0.5 - 1 | > 1 : 0.61 | 0.17 | 0.21 
+
+chain/5410BCE_Buntgen18.npy
+<0.5 | 0.5 - 1 | > 1 : 0.61 | 0.18 | 0.21 
+
+chain/5410BCE_Brehm21.npy
+<0.5 | 0.5 - 1 | > 1 : 0.71 | 0.17 | 0.12 
+

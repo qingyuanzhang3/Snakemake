@@ -1,0 +1,313 @@
+Brehm21_USABristlecone.csv: Hemisphere North, Growth april-september
+Brehm21_AlpineLarch.csv: Hemisphere North, Growth april-september
+Brehm21_GermanOak.csv: Hemisphere North, Growth april-september
+Büntgen18_CHN01.csv: Hemisphere North, Growth april-september
+Büntgen18_USA11.csv: Hemisphere North, Growth april-september
+Büntgen18_USA18.csv: Hemisphere North, Growth april-september
+Guttler15_Kauri.csv: Hemisphere North, Custom Growth Season
+Scifo19_Oak.csv: Hemisphere North, Growth april-september
+Rakowski15_Oak.csv: Hemisphere North, Growth april-september
+Büntgen18_USA02.csv: Hemisphere North, Growth april-september
+Miyake12_Cedar.csv: Hemisphere North, Growth april-september
+Büntgen18_SWE05.csv: Hemisphere North, Growth april-september
+Büntgen18_GER01.csv: Hemisphere North, Growth april-september
+Büntgen18_JAP01.csv: Hemisphere North, Growth april-september
+Jull14_Bristlecone.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GER07.csv: Hemisphere North, Growth april-september
+Büntgen18_MON03.csv: Hemisphere North, Growth april-september
+Büntgen18_CHN01.csv: Hemisphere North, Growth april-september
+Büntgen18_USA11.csv: Hemisphere North, Growth april-september
+Büntgen18_USA18.csv: Hemisphere North, Growth april-september
+Guttler15_Kauri.csv: Hemisphere North, Custom Growth Season
+Scifo19_Oak.csv: Hemisphere North, Growth april-september
+Rakowski15_Oak.csv: Hemisphere North, Growth april-september
+Büntgen18_USA02.csv: Hemisphere North, Growth april-september
+Miyake12_Cedar.csv: Hemisphere North, Growth april-september
+Büntgen18_SWE05.csv: Hemisphere North, Growth april-september
+Büntgen18_GER01.csv: Hemisphere North, Growth april-september
+Büntgen18_JAP01.csv: Hemisphere North, Growth april-september
+Jull14_Bristlecone.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GER07.csv: Hemisphere North, Growth april-september
+Büntgen18_MON03.csv: Hemisphere North, Growth april-september
+Rakowski19_Oak.csv: Hemisphere North, Custom Growth Season
+Sakurai20_CedarEw.csv: Hemisphere North, Custom Growth Season
+Sakurai20_CedarLw.csv: Hemisphere North, Custom Growth Season
+Miyake21_Bristlecone.csv: Hemisphere North, Growth april-september
+Miyake21_Finland1.csv: Hemisphere North, Growth april-september
+Miyake21_Switzerland.csv: Hemisphere North, Growth april-september
+Brehm21_USABristlecone.csv: Hemisphere North, Growth april-september
+Brehm21_AlpineLarch.csv: Hemisphere North, Growth april-september
+Brehm21_GermanOak.csv: Hemisphere North, Growth april-september
+Rakowski19_Oak.csv: Hemisphere North, Custom Growth Season
+Sakurai20_CedarEw.csv: Hemisphere North, Custom Growth Season
+Sakurai20_CedarLw.csv: Hemisphere North, Custom Growth Season
+Miyake21_Bristlecone.csv: Hemisphere North, Growth april-september
+Miyake21_Finland1.csv: Hemisphere North, Growth april-september
+Miyake21_Switzerland.csv: Hemisphere North, Growth april-september
+Miyake13_Cedar.csv: Hemisphere North, Growth april-september
+Büntgen18_DAR01_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_SWE01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_ALT02.csv: Hemisphere North, Custom Growth Season
+Brehm21_ETH.csv: Hemisphere North, Growth april-september
+Fogtmann-Schulz17_Ew.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CHI01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE04.csv: Hemisphere North, Custom Growth Season
+Fogtmann-Schulz17_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON05.csv: Hemisphere North, Custom Growth Season
+Rakowski17_Oak.csv: Hemisphere North, Growth april-september
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Miyake21_Bristlecone.csv: Hemisphere North, Growth april-september
+Miyake21_Finland1.csv: Hemisphere North, Growth april-september
+Miyake21_Switzerland.csv: Hemisphere North, Growth april-september
+Rakowski19_Oak.csv: Hemisphere North, Custom Growth Season
+Sakurai20_CedarEw.csv: Hemisphere North, Custom Growth Season
+Sakurai20_CedarLw.csv: Hemisphere North, Custom Growth Season
+Brehm21_USABristlecone.csv: Hemisphere North, Growth april-september
+Brehm21_AlpineLarch.csv: Hemisphere North, Growth april-september
+Brehm21_GermanOak.csv: Hemisphere North, Growth april-september
+Brehm21_USABristlecone.csv: Hemisphere North, Custom Growth Season
+Brehm21_IrishOak.csv: Hemisphere North, Growth april-september
+Brehm21_SibirianLarch.csv: Hemisphere North, Growth april-september
+Brehm21_AlpineLarch.csv: Hemisphere North, Growth april-september
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03_SH.csv: Hemisphere South, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS20.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_TAS01_SH.csv: Hemisphere South, Custom Growth Season
+Miyake13_Cedar.csv: Hemisphere North, Growth april-september
+Büntgen18_DAR01_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_SWE01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_ALT02.csv: Hemisphere North, Custom Growth Season
+Brehm21_ETH.csv: Hemisphere North, Growth april-september
+Fogtmann-Schulz17_Ew.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CHI01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE04.csv: Hemisphere North, Custom Growth Season
+Fogtmann-Schulz17_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON05.csv: Hemisphere North, Custom Growth Season
+Rakowski17_Oak.csv: Hemisphere North, Growth april-september
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03_SH.csv: Hemisphere South, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS20.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_TAS01_SH.csv: Hemisphere South, Custom Growth Season
+Brehm21_USABristlecone.csv: Hemisphere North, Custom Growth Season
+Brehm21_IrishOak.csv: Hemisphere North, Growth april-september
+Brehm21_SibirianLarch.csv: Hemisphere North, Growth april-september
+Brehm21_AlpineLarch.csv: Hemisphere North, Growth april-september
+Miyake13_Cedar.csv: Hemisphere North, Growth april-september
+Büntgen18_DAR01_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_SWE01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_ALT02.csv: Hemisphere North, Custom Growth Season
+Brehm21_ETH.csv: Hemisphere North, Growth april-september
+Fogtmann-Schulz17_Ew.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CHI01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE04.csv: Hemisphere North, Custom Growth Season
+Fogtmann-Schulz17_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON05.csv: Hemisphere North, Custom Growth Season
+Rakowski17_Oak.csv: Hemisphere North, Growth april-september
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Brehm21_USABristlecone.csv: Hemisphere North, Custom Growth Season
+Brehm21_IrishOak.csv: Hemisphere North, Growth april-september
+Brehm21_SibirianLarch.csv: Hemisphere North, Growth april-september
+Brehm21_AlpineLarch.csv: Hemisphere North, Growth april-september
+Büntgen18_CHN01.csv: Hemisphere North, Growth april-september
+Büntgen18_USA11.csv: Hemisphere North, Growth april-september
+Büntgen18_USA18.csv: Hemisphere North, Growth april-september
+Guttler15_Kauri.csv: Hemisphere North, Custom Growth Season
+Scifo19_Oak.csv: Hemisphere North, Growth april-september
+Rakowski15_Oak.csv: Hemisphere North, Growth april-september
+Büntgen18_USA02.csv: Hemisphere North, Growth april-september
+Miyake12_Cedar.csv: Hemisphere North, Growth april-september
+Büntgen18_SWE05.csv: Hemisphere North, Growth april-september
+Büntgen18_GER01.csv: Hemisphere North, Growth april-september
+Büntgen18_JAP01.csv: Hemisphere North, Growth april-september
+Jull14_Bristlecone.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GER07.csv: Hemisphere North, Growth april-september
+Büntgen18_MON03.csv: Hemisphere North, Growth april-september
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03_SH.csv: Hemisphere South, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS20.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_TAS01_SH.csv: Hemisphere South, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TAS01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TAS01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TAS01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TAS01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_ALT01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_AUT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_CAN06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_GRE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_MON09.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAK04.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS04.csv: Hemisphere North, Growth april-september
+Büntgen18_RUS15.csv: Hemisphere North, Custom Growth Season
+Büntgen18_RUS17.csv: Hemisphere North, Custom Growth Season
+Büntgen18_SWE02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TIB01.csv: Hemisphere North, Custom Growth Season
+Jull14_Larch.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Ew.csv: Hemisphere North, Custom Growth Season
+Uusitalo18_Pine_Lw.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR01.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR06.csv: Hemisphere North, Custom Growth Season
+Büntgen18_DAR07.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT02.csv: Hemisphere North, Custom Growth Season
+Büntgen18_PAT03.csv: Hemisphere North, Custom Growth Season
+Büntgen18_TAS01.csv: Hemisphere North, Custom Growth Season
+Brehm21_AlpineLarch.csv: Hemisphere North, Growth april-september
+Brehm21_IrishOak.csv: Hemisphere North, Growth april-september
+Brehm21_SibirianLarch.csv: Hemisphere North, Growth april-september
+Brehm21_USABristlecone.csv: Hemisphere North, Custom Growth Season
